@@ -1,0 +1,130 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portofolio</title>
+    <link rel="stylesheet" href="static/styles.css" />
+
+    <!--Font awesome cdn icon css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!--Header / Navbar-->
+    <header>
+      <nav>
+        <div class="togglebtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="logo">
+          <i class="fa-solid fa-g"></i>
+          <a class="logo-text">George Mutinda</a>
+        </div>
+        <ul class="navlinks">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="container">
+        <div class="hero-pic">
+          <img
+            src="{% static 'app/images/django-logo.jpg' %}"
+            alt="profile pic"
+          />
+        </div>
+        <div class="hero-text">
+          <h5>Hi I'm a <span class="input">Django Developer</span></h5>
+          <h1>George Mutinda</h1>
+          <p>
+            Hi, I'm a Django developer passionate about building clean, secure,
+            and efficient web applications. I enjoy turning ideas into
+            full-stack solutions using Python, Django, and modern web
+            technologies.
+          </p>
+          <div class="btn-group">
+            <a href="#" class="btn active">Download CV</a>
+            <a href="#" class="btn">Contact</a>
+          </div>
+          <div class="social">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://github.com/"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about-section">
+        <div class="section-content">
+          <div class="about-image-wrapper">
+            <img
+              src="{% static 'app/images/profile.jpg' %}"
+              alt="Profile Picture"
+            />
+          </div>
+          <div class="about-details">
+            <h2 class="section-title">About Me</h2>
+            <div class="text-wrapper">
+              <p class="text">
+                I'm George Mutinda, a passionate Django developer with a strong
+                background in building scalable, secure, and user-friendly web
+                applications. I specialize in Python, Django, HTML, CSS, and
+                JavaScript, and I enjoy turning complex problems into functional
+                solutions.
+              </p>
+              <p class="text">
+                With experience in both front-end and back-end development, I’m
+                comfortable working across the full stack. I’ve built personal
+                projects like the Landlord-Tenant administration website
+              </p>
+              <p class="text">
+                When I’m not coding, I enjoy exploring new technologies, and
+                learning more about AI and automation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- typed js for typing text effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+      /** creating button click show-hide navbar **/
+      var togglebtn = document.querySelector(".togglebtn");
+      var nav = document.querySelector(".navlinks");
+      var links = document.querySelector(".navlinks li");
+
+      togglebtn.addEventListener("click", function () {
+        this.classList.toggle("click");
+        nav.classList.toggle("open");
+      });
+
+      var typed = new Typed(".input", {
+        strings: [
+          "Frontend Developer",
+          "Django Developer",
+          "Web Developer",
+          "Python Developer",
+        ],
+        typedSpeed: 70,
+        backSpeed: 55,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
