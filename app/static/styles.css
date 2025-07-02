@@ -16,7 +16,7 @@ html {
 
 .section-title {
     text-align: center;
-    padding: 60px 0 100px;
+    padding: 60px 0 50px;
 }
 
 .section-title::after {
@@ -233,6 +233,66 @@ nav .navlinks li a {
     font-size: 1.12rem;
 }
 
+/* My-Skills section styling */
+.container .skills-wrapper {
+    display: block;
+}
+
+.container .skills-wrapper .section-title {
+    color: #fff;
+}
+
+.container .skills-container {
+    display: flex;
+    padding: 3rem;
+    gap: 50px;
+}
+
+.container .skills-container .skill-card {
+    background: #007ced;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px -8px rgba(0 0 0 / 78%);
+    cursor: pointer;
+}
+
+.container .skills-wrapper .skills-container .skill-card p {
+    color: #fff;
+}
+
+.container .skills-wrapper .skills-container .skill-card h3 {
+    color: black;
+}
+.container .skills-container .skill-card:hover {
+    transition: transform 0.3s;
+}
+
+/* Form-contact section styling */
+.form-contact {
+    background: #e5e5e5;
+    display: block;
+    padding: 50px;
+}
+
+.form-contact .form-contact-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-contact .form-contact-section .contact-info-list {
+    list-style-type: none;
+}
+
+.form-contact .form-contact-section .contact-info-list .contact-info {
+    display: flex;
+    gap: 50px;
+    padding-bottom: 20px;
+}
+
+.form-contact .form-contact-section .contact-form {
+    display: block;
+}
+
 /* Responsive design and displaying navbar for small screen */
 @media(max-width:930px) {
     nav .togglebtn {
@@ -294,12 +354,43 @@ nav .navlinks li a {
 
 @media(max-width:768px) {
     .container {
-        margin-top: 4rem;
+        padding-top: 80px;
         flex-direction: column;
-        padding-top: 2rem;
     }
 
     .hero-text {
         padding: 40px 0px;
+    }
+
+    /* About section */
+    .about-section .section-content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .about-section .section-content .about-image-wrapper {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .about-section .section-content .about-details {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .about-section .section-content .about-details .text-wrapper {
+        width: 100%;
+    }
+
+    /* My-Skills scetion */
+    .container .skills-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container .skills-container .skill-card {
+        width: 350px;
+        box-shadow: 0 10px 10px -8px rgba(0 0 0 / 78%);
+        cursor: pointer;
     }
 }
