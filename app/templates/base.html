@@ -28,17 +28,17 @@
           <a class="logo-text">George Mutinda</a>
         </div>
         <ul class="navlinks">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">My Skills</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">My Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <!-- Hero Section -->
-      <section class="container">
+      <section class="container" id="hero">
         <div class="hero-pic">
           <img
             src="{% static 'app/images/django-logo.jpg' %}"
@@ -60,7 +60,9 @@
           </div>
           <div class="social">
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://x.com/home?lang=en"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
             <a href="https://github.com/"
               ><i class="fa-brands fa-github"></i
             ></a>
@@ -69,7 +71,7 @@
       </section>
 
       <!-- About Section -->
-      <section class="about-section">
+      <section class="about-section" id="about">
         <div class="section-content">
           <div class="about-image-wrapper">
             <img
@@ -97,7 +99,7 @@
       </section>
 
       <!-- My-Skills Section -->
-      <section class="container">
+      <section class="container" id="skills">
         <div class="skills-wrapper">
           <h2 class="section-title">My Skills</h2>
           <div class="skills-container">
@@ -132,7 +134,7 @@
       </section>
 
       <!--Contact Section-->
-      <section class="container form-contact">
+      <section class="container form-contact" id="contact">
         <h2 class="section-title">My Contacts</h2>
         <div class="form-contact-section">
           <ul class="contact-info-list">
@@ -150,7 +152,8 @@
             </li>
           </ul>
 
-          <form action="#" class="contact-form">
+          <form action="{% url 'contact' %}" class="contact-form" method="post">
+            {% csrf_token %}
             <input
               type="text"
               class="form-input"
@@ -172,6 +175,21 @@
           </form>
         </div>
       </section>
+
+      <footer>
+        <div class="footer-section">
+          <p class="copyright-text">&copy; 2025 George Mutinda</p>
+          <div class="social">
+            <a href="#"><i class="fa-brands fa-instagram fa-lg"></i></a>
+            <a href="https://x.com/home?lang=en"
+              ><i class="fa-brands fa-twitter fa-lg"></i
+            ></a>
+            <a href="https://github.com/"
+              ><i class="fa-brands fa-github fa-lg"></i
+            ></a>
+          </div>
+        </div>
+      </footer>
     </main>
 
     <!-- typed js for typing text effect -->

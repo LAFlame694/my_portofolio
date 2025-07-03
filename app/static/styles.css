@@ -107,6 +107,13 @@ nav .navlinks li a {
     margin-right: 2.5rem;
 }
 
+nav .navlinks li a:hover {
+    background: #007ced;
+    padding: 10px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
 .container {
     display: flex;
     justify-content: space-around;
@@ -116,6 +123,7 @@ nav .navlinks li a {
     width: 100%;
     min-height: 100vh;
 }
+
 
 .container .hero-pic {
     width: 300px;
@@ -269,7 +277,7 @@ nav .navlinks li a {
 
 /* Form-contact section styling */
 .form-contact {
-    background: #e5e5e5;
+    background: #faf4f5;
     display: block;
     padding: 50px;
 }
@@ -290,11 +298,77 @@ nav .navlinks li a {
 }
 
 .form-contact .form-contact-section .contact-form {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-contact .form-contact-section .contact-form .form-input {
+    height: 50px;
+    width: 400px;
+    padding: 0 12px;
+    outline: none;
+    border-radius: 10px;
+}
+
+.form-contact .form-contact-section .contact-form textarea.form-input {
+    height: 100px;
+    padding: 12px;
+    resize: vertical;
+}
+
+.form-contact .form-contact-section .contact-form .submit-button {
+    padding: 10px 26px;
+    margin-top: 10px;
+    background: #222;
+    color: #faf4f5;
+    font-size: 1.12rem;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.form-contact .form-contact-section .contact-form .submit-button:hover {
+    background: transparent;
+    color: #222;
+    border: 2px solid #007ced;
+}
+
+/* footer section styling */
+footer {
+    background-color: #222;
+    padding: 30px;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.footer-section .copyright-text {
+    color: #faf4f5;
+    font-size: 1.12rem;
+}
+
+.footer-section .social i {
+    margin-right: 10px;
+    color: #faf4f5;
+}
+
+.footer-section .social i:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
+    color: #007ced;
+    transform: 0.3s ease;
 }
 
 /* Responsive design and displaying navbar for small screen */
 @media(max-width:930px) {
+    nav .navlinks {
+        display: flex;
+        flex-direction: column;
+    }
+
     nav .togglebtn {
         display: initial;
     }
@@ -350,6 +424,66 @@ nav .navlinks li a {
     nav .navlinks.open {
         right: 0;
     }
+
+    .container {
+        padding-top: 80px;
+        flex-direction: column;
+    }
+
+    .hero-text {
+        padding: 40px 0px;
+    }
+
+     /* About section */
+    .about-section .section-content {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 30px;
+    }
+
+    .about-section .section-content .about-image-wrapper {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .about-section .section-content .about-details {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .about-section .section-content .about-details .text-wrapper {
+        width: 100%;
+    }
+    
+    /* My-Skills scetion */
+    .container .skills-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .container .skills-container .skill-card {
+        width: 350px;
+        box-shadow: 0 10px 10px -8px rgba(0 0 0 / 78%);
+        cursor: pointer;
+    }
+
+    /* contact section */
+    .form-contact .form-contact-section {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        width: 100%;
+    }
+
+    .form-contact .form-contact-section .contact-form {
+        width: 100%;
+    }
+
+    .form-contact .form-contact-section .contact-form .form-input {
+        width: 100%;
+    }
 }
 
 @media(max-width:768px) {
@@ -366,6 +500,7 @@ nav .navlinks li a {
     .about-section .section-content {
         display: flex;
         flex-direction: column-reverse;
+        padding-top: 30px;
     }
 
     .about-section .section-content .about-image-wrapper {
@@ -392,5 +527,23 @@ nav .navlinks li a {
         width: 350px;
         box-shadow: 0 10px 10px -8px rgba(0 0 0 / 78%);
         cursor: pointer;
+    }
+
+    /* contact section */
+    .form-contact .form-contact-section {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        width: 100%;
+    }
+
+    .form-contact .form-contact-section .contact-form {
+        width: 100%;
+    }
+
+    .form-contact .form-contact-section .contact-form .form-input {
+        width: 100%;
     }
 }
